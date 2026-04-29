@@ -154,9 +154,24 @@
       }
 
       .footer {
+        display: flex;
+        gap: 16px;
+        justify-content: space-between;
         margin: 42px 0 0;
         color: var(--quiet);
         font-size: 0.875rem;
+      }
+
+      .footer a {
+        color: var(--quiet);
+        text-decoration-color: var(--quiet);
+        text-underline-offset: 4px;
+      }
+
+      .footer a:hover,
+      .footer a:focus-visible {
+        color: var(--muted);
+        text-decoration-color: var(--text);
       }
 
       @media (max-width: 720px) {
@@ -180,6 +195,11 @@
 
         .product:nth-child(-n + 2) {
           border-bottom: 1px solid var(--line);
+        }
+
+        .footer {
+          flex-direction: column;
+          gap: 8px;
         }
       }
 
@@ -259,7 +279,8 @@
         </nav>
 
         <footer class="footer">
-          © 2026 RidingWaves LLC. All rights reserved.
+          <span>© 2026 RidingWaves LLC. All rights reserved.</span>
+          <a href="mailto:contact@ridingwaves.io">Contact</a>
         </footer>
       </div>
     </main>
